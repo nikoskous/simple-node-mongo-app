@@ -1,7 +1,7 @@
 FROM node:12
 
 # Create app directory
-WORKDIR ./
+WORKDIR /usr/src/app
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
@@ -16,4 +16,4 @@ RUN npm install
 COPY . .
 
 EXPOSE 8080
-CMD [ "node", "index.js" ]
+CMD ["npm", "start"]
