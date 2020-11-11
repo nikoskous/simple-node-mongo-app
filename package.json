@@ -1,7 +1,7 @@
 {
-  "name": "Simple Node - MongoDB app",
+  "name": "express-api-starter",
   "version": "1.2.0",
-  "description": "Simple Node - MongoDB app",
+  "description": " A basic starter for an express.js API",
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
