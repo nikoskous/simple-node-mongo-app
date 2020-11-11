@@ -27,7 +27,8 @@ app.get('/', (req, res) => {
 
 app.post('/item/add', (req, res) => {
   const newItem = new Item({
-    name: req.body.name
+    name: req.body.name,
+    quantity: req.body.quantity
   });
 
   newItem.save().then(item => res.redirect('/'));
