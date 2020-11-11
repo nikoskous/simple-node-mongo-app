@@ -14,11 +14,13 @@
 
   <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 100vh; width: 100vw;">
     <div class="col-6">
-      <p class="font-weight-bold" style="font-size: 1.2rem;">Simple Node - MongoDB app (Product list app)</p>
+      <p class="font-weight-bold" style="font-size: 1.3rem;">Simple Node - MongoDB app (Product list app)</p>
       <form class="mt-4" method="post" action="/item/add">
-        <label for="name">Name</label>
+        <label for="name">Product Name</label>
         <input type="text" class="form-control" name="name">
-        <input type="submit" class="form-control" value="Add">
+        <label for="quantity">Quantity</label>
+        <input type="number" class="form-control" name="quantity">
+        <input type="submit" class="form-control mt-3" style="color: white; background-color: rgba(51, 51, 215, 0.81);" value="Add">
       </form>
 
       <div class="row w-100 m-0 mt-4">
@@ -30,6 +32,8 @@
           <% items.forEach(function(item) { %>
           <li>
             <span class="font-weight-bold">Name:</span>  <%= item.name %>
+            <br>
+            <span class="font-weight-bold">Quantity:</span>  <%= item.quantity %>
             <br>
             <span class="font-weight-bold">Date added:</span> <%= item.date %>
           </li>
